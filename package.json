@@ -1,0 +1,7 @@
+{
+	"author": "Voltaism",
+	"version": "1.0",
+        "server_scripts": [
+                "server/nocrazyheli.lua"
+        ]
+}
