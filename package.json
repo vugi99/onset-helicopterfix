@@ -1,7 +1,12 @@
 {
 	"author": "Voltaism",
-	"version": "1.0",
+	"version": "1.1",
+        "onset_build": "1.0.3",
         "server_scripts": [
                 "server/nocrazyheli.lua"
-        ]
+        ],
+        "auto_updater": {
+           "package.json": "https://raw.githubusercontent.com/vugi99/onset-helicopterfix/master/package.json",
+           "server/nocrazyheli.lua": "https://raw.githubusercontent.com/vugi99/onset-helicopterfix/master/server/nocrazyheli.lua"
+        }
 }
