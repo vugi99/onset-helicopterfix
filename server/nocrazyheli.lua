@@ -76,7 +76,7 @@ AddEvent("OnGameTick",function()
     for i,v in ipairs(helitable) do
         local foundheli = false
        for i2,v2 in ipairs(GetAllVehicles()) do
-          if v.id == v2 then
+          if (v.id == v2 and GetVehicleDriver(v2)~=0) then
              foundheli=true
           end
        end
@@ -84,9 +84,9 @@ AddEvent("OnGameTick",function()
           table.remove(helitable,i)
        end
     end
-
     for i,veh in ipairs(GetAllVehicles()) do
-        if (GetVehicleModelName(veh)=="Helicopter_01" or GetVehicleModelName(veh)=="Helicopter_02") then
+        if (GetVehicleModelName(veh)=="Helicopter_01" or GetVehicleModelName(veh)=="Helicopter_02" or GetVehicleModelName(veh)=="Helicopter_03") then
+         if GetVehicleDriver(veh)~=0 then
             local rx,ry,rz = GetVehicleRotation(veh)
             local found = false
             local index = 0
@@ -137,5 +137,6 @@ AddEvent("OnGameTick",function()
 
             end
         end
+      end
     end
 end)
